@@ -46,7 +46,7 @@
             // 
             // button4
             // 
-            this.button4.Font = new System.Drawing.Font("Cascadia Code SemiBold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(22, 396);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(274, 36);
@@ -62,6 +62,7 @@
             this.BtnRemove.TabIndex = 46;
             this.BtnRemove.Text = "Xóa";
             this.BtnRemove.UseVisualStyleBackColor = true;
+            this.BtnRemove.Click += new System.EventHandler(this.BtnRemove_Click);
             // 
             // BtnEdit
             // 
@@ -71,6 +72,7 @@
             this.BtnEdit.TabIndex = 45;
             this.BtnEdit.Text = "Chỉnh sửa";
             this.BtnEdit.UseVisualStyleBackColor = true;
+            this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // BtnAdd
             // 
@@ -80,6 +82,7 @@
             this.BtnAdd.TabIndex = 44;
             this.BtnAdd.Text = "Thêm";
             this.BtnAdd.UseVisualStyleBackColor = true;
+            this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // DataGridService
             // 
@@ -91,12 +94,13 @@
             this.DataGridService.RowTemplate.Height = 24;
             this.DataGridService.Size = new System.Drawing.Size(471, 336);
             this.DataGridService.TabIndex = 43;
+            this.DataGridService.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridService_CellClick);
             // 
             // TextBoxPrice
             // 
             this.TextBoxPrice.Location = new System.Drawing.Point(17, 222);
             this.TextBoxPrice.Name = "TextBoxPrice";
-            this.TextBoxPrice.Size = new System.Drawing.Size(279, 31);
+            this.TextBoxPrice.Size = new System.Drawing.Size(279, 35);
             this.TextBoxPrice.TabIndex = 40;
             // 
             // label4
@@ -111,7 +115,7 @@
             // 
             this.TextBoxName.Location = new System.Drawing.Point(17, 166);
             this.TextBoxName.Name = "TextBoxName";
-            this.TextBoxName.Size = new System.Drawing.Size(279, 31);
+            this.TextBoxName.Size = new System.Drawing.Size(279, 35);
             this.TextBoxName.TabIndex = 38;
             // 
             // label3
@@ -126,7 +130,7 @@
             // 
             this.TextBoxId.Location = new System.Drawing.Point(17, 108);
             this.TextBoxId.Name = "TextBoxId";
-            this.TextBoxId.Size = new System.Drawing.Size(279, 31);
+            this.TextBoxId.Size = new System.Drawing.Size(279, 35);
             this.TextBoxId.TabIndex = 36;
             // 
             // label2
@@ -140,12 +144,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cascadia Code", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(315, 24);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(304, 44);
+            this.label1.Size = new System.Drawing.Size(337, 46);
             this.label1.TabIndex = 34;
             this.label1.Text = "Quản Lý Dịch Vụ";
             // 
@@ -157,10 +161,11 @@
             this.BtnRefresh.TabIndex = 48;
             this.BtnRefresh.Text = "Tải Lại";
             this.BtnRefresh.UseVisualStyleBackColor = true;
+            this.BtnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
             // ServiceForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(842, 484);
             this.Controls.Add(this.BtnRefresh);
@@ -176,12 +181,12 @@
             this.Controls.Add(this.TextBoxId);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ServiceForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ServiceForm";
-            this.Load += new System.EventHandler(this.ServiceForm_Load_1);
+            this.Load += new System.EventHandler(this.ServiceForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridService)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

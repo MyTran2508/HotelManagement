@@ -26,6 +26,7 @@ namespace DTO
         public DbSet<Room> Rooms { get; set; }
         public DbSet<KindOfRoom> KindOfRooms { get; set; }
         public DbSet<RoomStatus> RoomStatuses { get; set; }
+        public DbSet<Service> Services{ get; set; }
 
         // Inject Constraints
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
