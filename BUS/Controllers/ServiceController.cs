@@ -83,10 +83,9 @@ namespace BUS.Controllers
                         var numOfState = context.SaveChanges();
                         if (numOfState > 0)
                         {
-                            error = "Update Service By Id Success!!!";
+                            error = "Insert Service Success!!!";
                             return true;
                         }
-                        return true;
                     }
                     error = "Service invalid!!!";
                     return false;

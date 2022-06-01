@@ -44,19 +44,19 @@
             this.button4 = new System.Windows.Forms.Button();
             this.TBCustomerId = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GridViewCustomer)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cascadia Code", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label1.Location = new System.Drawing.Point(459, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(361, 44);
+            this.label1.Size = new System.Drawing.Size(418, 46);
             this.label1.TabIndex = 0;
             this.label1.Text = "Quản Lý Khách Hàng";
             // 
@@ -72,14 +72,14 @@
             // 
             this.TBId.Location = new System.Drawing.Point(12, 97);
             this.TBId.Name = "TBId";
-            this.TBId.Size = new System.Drawing.Size(279, 31);
+            this.TBId.Size = new System.Drawing.Size(279, 35);
             this.TBId.TabIndex = 2;
             // 
             // TBName
             // 
             this.TBName.Location = new System.Drawing.Point(12, 155);
             this.TBName.Name = "TBName";
-            this.TBName.Size = new System.Drawing.Size(279, 31);
+            this.TBName.Size = new System.Drawing.Size(279, 35);
             this.TBName.TabIndex = 4;
             // 
             // label3
@@ -94,7 +94,7 @@
             // 
             this.TBAddress.Location = new System.Drawing.Point(12, 267);
             this.TBAddress.Name = "TBAddress";
-            this.TBAddress.Size = new System.Drawing.Size(279, 31);
+            this.TBAddress.Size = new System.Drawing.Size(279, 35);
             this.TBAddress.TabIndex = 6;
             // 
             // label4
@@ -109,7 +109,7 @@
             // 
             this.TBPhone.Location = new System.Drawing.Point(12, 323);
             this.TBPhone.Name = "TBPhone";
-            this.TBPhone.Size = new System.Drawing.Size(279, 31);
+            this.TBPhone.Size = new System.Drawing.Size(279, 35);
             this.TBPhone.TabIndex = 8;
             // 
             // label5
@@ -131,6 +131,7 @@
             this.GridViewCustomer.RowTemplate.Height = 24;
             this.GridViewCustomer.Size = new System.Drawing.Size(781, 431);
             this.GridViewCustomer.TabIndex = 9;
+            this.GridViewCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridViewCustomer_CellClick);
             // 
             // BtnInsert
             // 
@@ -140,6 +141,7 @@
             this.BtnInsert.TabIndex = 10;
             this.BtnInsert.Text = "Thêm";
             this.BtnInsert.UseVisualStyleBackColor = true;
+            this.BtnInsert.Click += new System.EventHandler(this.BtnInsert_Click);
             // 
             // BtnEdit
             // 
@@ -149,6 +151,7 @@
             this.BtnEdit.TabIndex = 11;
             this.BtnEdit.Text = "Chỉnh sửa";
             this.BtnEdit.UseVisualStyleBackColor = true;
+            this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // BtnRemove
             // 
@@ -158,10 +161,11 @@
             this.BtnRemove.TabIndex = 12;
             this.BtnRemove.Text = "Xóa";
             this.BtnRemove.UseVisualStyleBackColor = true;
+            this.BtnRemove.Click += new System.EventHandler(this.BtnRemove_Click);
             // 
             // button4
             // 
-            this.button4.Font = new System.Drawing.Font("Cascadia Code", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(12, 492);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(274, 36);
@@ -173,7 +177,7 @@
             // 
             this.TBCustomerId.Location = new System.Drawing.Point(12, 211);
             this.TBCustomerId.Name = "TBCustomerId";
-            this.TBCustomerId.Size = new System.Drawing.Size(279, 31);
+            this.TBCustomerId.Size = new System.Drawing.Size(279, 35);
             this.TBCustomerId.TabIndex = 15;
             // 
             // label6
@@ -184,21 +188,22 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "CMND/CCCD";
             // 
-            // button1
+            // btnRefresh
             // 
-            this.button1.Location = new System.Drawing.Point(159, 427);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 36);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Tải Lại";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnRefresh.Location = new System.Drawing.Point(159, 427);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(132, 36);
+            this.btnRefresh.TabIndex = 16;
+            this.btnRefresh.Text = "Tải Lại";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // CustomerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1160, 575);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.TBCustomerId);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button4);
@@ -215,12 +220,12 @@
             this.Controls.Add(this.TBId);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "CustomerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản Lý Khách Hàng";
-            this.Load += new System.EventHandler(this.CustomerForm_Load_1);
+            this.Load += new System.EventHandler(this.CustomerForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GridViewCustomer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -245,6 +250,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox TBCustomerId;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

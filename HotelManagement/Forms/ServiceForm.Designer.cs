@@ -32,7 +32,7 @@
             this.BtnRemove = new System.Windows.Forms.Button();
             this.BtnEdit = new System.Windows.Forms.Button();
             this.BtnAdd = new System.Windows.Forms.Button();
-            this.DataGridService = new System.Windows.Forms.DataGridView();
+            this.GridViewService = new System.Windows.Forms.DataGridView();
             this.TextBoxPrice = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.TextBoxName = new System.Windows.Forms.TextBox();
@@ -41,7 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnRefresh = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridService)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridViewService)).BeginInit();
             this.SuspendLayout();
             // 
             // button4
@@ -84,17 +84,17 @@
             this.BtnAdd.UseVisualStyleBackColor = true;
             this.BtnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
-            // DataGridService
+            // GridViewService
             // 
-            this.DataGridService.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.DataGridService.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridService.Location = new System.Drawing.Point(345, 108);
-            this.DataGridService.Name = "DataGridService";
-            this.DataGridService.RowHeadersWidth = 51;
-            this.DataGridService.RowTemplate.Height = 24;
-            this.DataGridService.Size = new System.Drawing.Size(471, 336);
-            this.DataGridService.TabIndex = 43;
-            this.DataGridService.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridService_CellClick);
+            this.GridViewService.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.GridViewService.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridViewService.Location = new System.Drawing.Point(345, 108);
+            this.GridViewService.Name = "GridViewService";
+            this.GridViewService.RowHeadersWidth = 51;
+            this.GridViewService.RowTemplate.Height = 24;
+            this.GridViewService.Size = new System.Drawing.Size(471, 336);
+            this.GridViewService.TabIndex = 43;
+            this.GridViewService.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridService_CellClick);
             // 
             // TextBoxPrice
             // 
@@ -173,7 +173,7 @@
             this.Controls.Add(this.BtnRemove);
             this.Controls.Add(this.BtnEdit);
             this.Controls.Add(this.BtnAdd);
-            this.Controls.Add(this.DataGridService);
+            this.Controls.Add(this.GridViewService);
             this.Controls.Add(this.TextBoxPrice);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.TextBoxName);
@@ -187,7 +187,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ServiceForm";
             this.Load += new System.EventHandler(this.ServiceForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridService)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridViewService)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,7 +198,7 @@
         private System.Windows.Forms.Button BtnRemove;
         private System.Windows.Forms.Button BtnEdit;
         private System.Windows.Forms.Button BtnAdd;
-        private System.Windows.Forms.DataGridView DataGridService;
+        private System.Windows.Forms.DataGridView GridViewService;
         private System.Windows.Forms.TextBox TextBoxPrice;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox TextBoxName;

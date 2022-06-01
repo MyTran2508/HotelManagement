@@ -44,7 +44,11 @@ namespace HotelManage.Forms
                     dt.Rows.Add(sv.Id, sv.Name, sv.Price );
 
                 }
-                this.DataGridService.DataSource = dt;
+                this.GridViewService.DataSource = dt;
+
+                this.GridViewService.Columns[0].Width = 100;
+                this.GridViewService.Columns[1].Width = 180;
+                this.GridViewService.Columns[2].Width = 150;
             }
         }
 
@@ -88,10 +92,10 @@ namespace HotelManage.Forms
             try
             {
                 // Get current Index
-                int rowIndex = Common.GetCurrentRowSelected(this.DataGridService);
+                int rowIndex = Common.GetCurrentRowSelected(this.GridViewService);
                 // Get Id
                 string Id = Common.
-                    GetValueOfCellGridView(this.DataGridService, rowIndex, 0);
+                    GetValueOfCellGridView(this.GridViewService, rowIndex, 0);
 
                 // remove
                 string error = "";
@@ -119,11 +123,11 @@ namespace HotelManage.Forms
             try
             {
                 // Get current Index
-                int rowIndex = Common.GetCurrentRowSelected(this.DataGridService);
+                int rowIndex = Common.GetCurrentRowSelected(this.GridViewService);
 
                 // Get Values
                 string id = Common.
-                    GetValueOfCellGridView(this.DataGridService, rowIndex, 0);
+                    GetValueOfCellGridView(this.GridViewService, rowIndex, 0);
                 string Name = Common.GetValueTextBox(TextBoxName);
                 float Price = float.Parse(Common.GetValueTextBox(TextBoxPrice));
               
@@ -152,17 +156,18 @@ namespace HotelManage.Forms
 
         private void DataGridService_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int rowIndex = Common.GetCurrentRowSelected(this.DataGridService);
+            int rowIndex = Common.GetCurrentRowSelected(this.GridViewService);
 
             // Get Values
             string id = Common.
-                GetValueOfCellGridView(this.DataGridService, rowIndex, 0);
-            string Name = Common.GetValueOfCellGridView(this.DataGridService, rowIndex, 1);
-            string Price = Common.GetValueOfCellGridView(this.DataGridService, rowIndex, 2);
+                GetValueOfCellGridView(this.GridViewService, rowIndex, 0);
+            string Name = Common.GetValueOfCellGridView(this.GridViewService, rowIndex, 1);
+            string Price = Common.GetValueOfCellGridView(this.GridViewService, rowIndex, 2);
 
             this.TextBoxId.Text = id;
             this.TextBoxName.Text = Name;
             this.TextBoxPrice.Text = Price;
+
         }
     }
 }
