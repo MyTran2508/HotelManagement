@@ -191,5 +191,53 @@ namespace HotelManage.Forms
             this.ClearAllTextBox();
             this.FillDataGrid();
         }
+
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string NameSearch = Common.GetValueTextBox(TBSearch);
+
+                string error = "";
+                var customers = cc.GetAllCustomersByName(NameSearch, ref error);
+
+                if (customers != null)
+                {
+                    DataTable dt = Common.GetDataTable(
+                       "Mã KH",
+                       "Họ Tên",
+                       "CMND/CCCD",
+                       "Địa Chỉ",
+                       "Số ĐT"
+                    );
+                    foreach (var cc in customers)
+                    {
+
+                        dt.Rows.Add(cc.Id, cc.Name, cc.CustomerId, cc.Address, cc.Phonenumber);
+
+                    }
+                    // Return databale 
+                    this.GridViewCustomer.DataSource = dt;
+
+                    // Set Width Column
+                    this.GridViewCustomer.Columns[0].Width = 100;
+                    this.GridViewCustomer.Columns[1].Width = 180;
+                    this.GridViewCustomer.Columns[2].Width = 150;
+                    this.GridViewCustomer.Columns[3].Width = 150;
+                    this.GridViewCustomer.Columns[4].Width = 150;
+                }
+                MessageBox.Show(error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            this.ClearAllTextBox();
+            this.FillDataGrid();
+        }
     }
 }

@@ -45,6 +45,9 @@
             this.TBCustomerId = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.TBSearch = new System.Windows.Forms.TextBox();
+            this.BtnSearch = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GridViewCustomer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -125,11 +128,11 @@
             this.GridViewCustomer.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.GridViewCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridViewCustomer.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.GridViewCustomer.Location = new System.Drawing.Point(340, 97);
+            this.GridViewCustomer.Location = new System.Drawing.Point(355, 138);
             this.GridViewCustomer.Name = "GridViewCustomer";
             this.GridViewCustomer.RowHeadersWidth = 51;
             this.GridViewCustomer.RowTemplate.Height = 24;
-            this.GridViewCustomer.Size = new System.Drawing.Size(781, 431);
+            this.GridViewCustomer.Size = new System.Drawing.Size(766, 390);
             this.GridViewCustomer.TabIndex = 9;
             this.GridViewCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridViewCustomer_CellClick);
             // 
@@ -198,11 +201,41 @@
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
+            // TBSearch
+            // 
+            this.TBSearch.Location = new System.Drawing.Point(355, 97);
+            this.TBSearch.Name = "TBSearch";
+            this.TBSearch.Size = new System.Drawing.Size(279, 35);
+            this.TBSearch.TabIndex = 17;
+            // 
+            // BtnSearch
+            // 
+            this.BtnSearch.Location = new System.Drawing.Point(662, 96);
+            this.BtnSearch.Name = "BtnSearch";
+            this.BtnSearch.Size = new System.Drawing.Size(127, 30);
+            this.BtnSearch.TabIndex = 18;
+            this.BtnSearch.Text = "Tìm Kiếm";
+            this.BtnSearch.UseVisualStyleBackColor = true;
+            this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
+            // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(815, 96);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(128, 30);
+            this.btnReset.TabIndex = 19;
+            this.btnReset.Text = "Trở Lại";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1160, 575);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.BtnSearch);
+            this.Controls.Add(this.TBSearch);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.TBCustomerId);
             this.Controls.Add(this.label6);
@@ -251,5 +284,8 @@
         private System.Windows.Forms.TextBox TBCustomerId;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.TextBox TBSearch;
+        private System.Windows.Forms.Button BtnSearch;
+        private System.Windows.Forms.Button btnReset;
     }
 }

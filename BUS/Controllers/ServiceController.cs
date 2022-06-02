@@ -166,5 +166,30 @@ namespace BUS.Controllers
             }
         }
 
+        //SearchName
+        public List<Service> GetAllServicesByName(string Name, ref string error)
+        {
+            try
+            {
+                using (var context = new Context())
+                {
+                    var services = context.Services.Where(cc => cc.Name == Name).ToList();
+
+                    if (services.Count() > 0)
+                    {
+                        error = "Get Services By Name Success!!!";
+                        return services;
+                    }
+                    else
+                        error = "Service Is Not Exsit!!!";
+                    return null;
+                }
+            }
+            catch
+            {
+                error = "Get Services By Name Failure!!!";
+                return null;
+            }
+        }
     }
 }

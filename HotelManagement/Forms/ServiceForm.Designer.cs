@@ -41,6 +41,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnRefresh = new System.Windows.Forms.Button();
+            this.TBSearch = new System.Windows.Forms.TextBox();
+            this.BtnReset = new System.Windows.Forms.Button();
+            this.BtnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GridViewService)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,11 +91,11 @@
             // 
             this.GridViewService.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.GridViewService.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridViewService.Location = new System.Drawing.Point(345, 108);
+            this.GridViewService.Location = new System.Drawing.Point(358, 153);
             this.GridViewService.Name = "GridViewService";
             this.GridViewService.RowHeadersWidth = 51;
             this.GridViewService.RowTemplate.Height = 24;
-            this.GridViewService.Size = new System.Drawing.Size(471, 336);
+            this.GridViewService.Size = new System.Drawing.Size(458, 291);
             this.GridViewService.TabIndex = 43;
             this.GridViewService.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridService_CellClick);
             // 
@@ -163,11 +166,41 @@
             this.BtnRefresh.UseVisualStyleBackColor = true;
             this.BtnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
+            // TBSearch
+            // 
+            this.TBSearch.Location = new System.Drawing.Point(358, 108);
+            this.TBSearch.Name = "TBSearch";
+            this.TBSearch.Size = new System.Drawing.Size(198, 35);
+            this.TBSearch.TabIndex = 49;
+            // 
+            // BtnReset
+            // 
+            this.BtnReset.Location = new System.Drawing.Point(690, 107);
+            this.BtnReset.Name = "BtnReset";
+            this.BtnReset.Size = new System.Drawing.Size(126, 26);
+            this.BtnReset.TabIndex = 50;
+            this.BtnReset.Text = "Trở Lại";
+            this.BtnReset.UseVisualStyleBackColor = true;
+            this.BtnReset.Click += new System.EventHandler(this.BtnReset_Click);
+            // 
+            // BtnSearch
+            // 
+            this.BtnSearch.Location = new System.Drawing.Point(562, 107);
+            this.BtnSearch.Name = "BtnSearch";
+            this.BtnSearch.Size = new System.Drawing.Size(122, 26);
+            this.BtnSearch.TabIndex = 51;
+            this.BtnSearch.Text = "Tìm Kiếm";
+            this.BtnSearch.UseVisualStyleBackColor = true;
+            this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
+            // 
             // ServiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(842, 484);
+            this.Controls.Add(this.BtnSearch);
+            this.Controls.Add(this.BtnReset);
+            this.Controls.Add(this.TBSearch);
             this.Controls.Add(this.BtnRefresh);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.BtnRemove);
@@ -207,5 +240,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BtnRefresh;
+        private System.Windows.Forms.TextBox TBSearch;
+        private System.Windows.Forms.Button BtnReset;
+        private System.Windows.Forms.Button BtnSearch;
     }
 }

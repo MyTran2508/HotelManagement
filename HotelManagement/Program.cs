@@ -48,16 +48,16 @@ namespace HotelManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CustomerForm());
-            try
-            {
-                DropDatabase();
-                CreateDatabase();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            Application.Run(new ServiceForm());
+            //try
+            //{
+            //    DropDatabase();
+            //    CreateDatabase();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
         }
     }
 }

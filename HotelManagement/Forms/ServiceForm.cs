@@ -169,5 +169,49 @@ namespace HotelManage.Forms
             this.TextBoxPrice.Text = Price;
 
         }
+
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string NameSearch = Common.GetValueTextBox(TBSearch);
+
+                string error = "";
+                var services = sc.GetAllServicesByName(NameSearch, ref error);
+
+                if (services != null)
+                {
+                    DataTable dt = Common.GetDataTable(
+                        "Mã Dịch Vụ",
+                        "Tên Dịch Vụ",
+                        "Đơn Giá"
+                        );
+
+                    foreach (var sv in services)
+                    {
+
+                        dt.Rows.Add(sv.Id, sv.Name, sv.Price);
+
+                    }
+                    this.GridViewService.DataSource = dt;
+
+                    this.GridViewService.Columns[0].Width = 100;
+                    this.GridViewService.Columns[1].Width = 180;
+                    this.GridViewService.Columns[2].Width = 150;
+
+                }
+                MessageBox.Show(error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void BtnReset_Click(object sender, EventArgs e)
+        {
+            this.ClearAllTextBox();
+            this.FillDataGrid();
+        }
     }
 }

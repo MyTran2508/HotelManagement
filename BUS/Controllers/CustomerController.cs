@@ -176,5 +176,29 @@ namespace BUS.Controllers
                 return false;
             }
         }
+
+        public List<Customer> GetAllCustomersByName(string Name, ref string error)
+        {   try
+            {
+                using (var context = new Context())
+                {
+                    var customer = context.Customers.Where(cc => cc.Name == Name).ToList() ;
+   
+                    if (customer.Count() > 0)
+                    {
+                        error = "Get Customers By Name Success!!!";
+                        return customer;
+                    }
+                    else
+                        error = "Customer Is Not Exsit!!!";
+                        return null;
+                }
+            }
+            catch
+            {
+                error = "Get Customers By Name Failure!!!";
+                return null;
+            }
+        }
     }
 }
